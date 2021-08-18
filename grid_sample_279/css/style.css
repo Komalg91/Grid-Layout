@@ -1,0 +1,87 @@
+html,body{
+    height: 100%;
+    width: 100%;
+    margin: 0%;
+    padding: 0%;
+    overflow-x: hidden;
+}
+.container{
+    height: 100%;
+}
+.grid_container{
+    padding:  1%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: 0.25fr 1.5fr 1.2fr 0.8fr;
+    grid-template-areas: 
+        "navbar navbar navbar navbar"
+        "sidebar main main main"
+        "sidebar content1 content2 content3"
+        "sidebar footer footer footer";
+    grid-gap: 0.2rem;
+    font-family: "Inter",sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 12px;
+}
+.navbar{
+    background-color: #a7ffeb;
+    grid-area: navbar;
+    padding-top: 5px;
+    border-radius: 5px;
+}
+.main{
+    background-color: #84ffff;
+    grid-area: main;
+    padding-top: 5px;
+    border-radius: 5px;
+}
+.sidebar{
+    background-color: #18ffff;
+    grid-area: sidebar;
+    padding-top: 5px;
+    border-radius: 5px;
+}
+.content1{
+    background-color: #6fffd2;
+    grid-area: content1;
+    padding-top: 5px;
+    border-radius: 5px;
+}
+.content2{
+    background-color: #64ffda;
+    grid-area: content2;
+    padding-top: 5px;
+    border-radius: 5px;
+}
+.content3{
+    background-color: #73ffba;
+    grid-area: content3;
+    padding-top: 5px;
+    border-radius: 5px;
+}
+.footer{
+    background-color: #73ffba;
+    grid-area: footer;
+    padding-top: 5px;
+    border-radius: 5px;
+}
+@media only screen and (max-width: 550px){
+    .grid_container{
+        padding: 2%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.4fr 0.4fr 2.2fr 1.2fr 1.2fr 1.2fr 1fr;
+        grid-template-areas: 
+            "navbar"
+            "sidebar"
+            "main"
+            "content1"
+            "content2"
+            "content3"
+            "footer";
+        grid-gap: 0.2rem;
+    }
+}
